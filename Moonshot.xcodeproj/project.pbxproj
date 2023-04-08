@@ -19,6 +19,7 @@
 		12B455DF29E1A34F00F8E921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		12B455E129E1A34F00F8E921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B455E429E1A34F00F8E921 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		12B455EB29E1A42400F8E921 /* Zelda.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zelda.webp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 			children = (
 				12B455DD29E1A34F00F8E921 /* MoonshotApp.swift */,
 				12B455DF29E1A34F00F8E921 /* ContentView.swift */,
+				12B455EB29E1A42400F8E921 /* Zelda.webp */,
 				12B455E129E1A34F00F8E921 /* Assets.xcassets */,
 				12B455E329E1A34F00F8E921 /* Preview Content */,
 			);
