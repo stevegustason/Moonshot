@@ -27,9 +27,10 @@ struct ContentView: View {
                 LazyVGrid(columns: columns) {
                     // ForEach of our mission structs
                     ForEach(missions) { mission in
-                        // Create a navigation link that for now goes to a placeholder text view
+                        // Create a navigation link
                         NavigationLink {
-                            Text("Detail view")
+                            // Have the link go to the MissionView, passing in the specific mission and the decoded astronauts dictionary
+                            MissionView(mission: mission, astronauts: astronauts)
                         } label: {
                             // Create a VStack with an image of each mission's logo, the mission's name, and the mission's launch date
                             VStack {
