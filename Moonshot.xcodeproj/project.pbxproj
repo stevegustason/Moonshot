@@ -19,6 +19,9 @@
 		12B455F729E375F200F8E921 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B455F629E375F200F8E921 /* Color-Theme.swift */; };
 		12B455F929E4BF1D00F8E921 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B455F829E4BF1D00F8E921 /* MissionView.swift */; };
 		12B455FB29E4C96B00F8E921 /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B455FA29E4C96B00F8E921 /* AstronautView.swift */; };
+		12B455FD29E613FF00F8E921 /* CrewScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B455FC29E613FF00F8E921 /* CrewScrollView.swift */; };
+		12B455FF29E63B9600F8E921 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B455FE29E63B9600F8E921 /* GridView.swift */; };
+		12B4560129E63BA100F8E921 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B4560029E63BA100F8E921 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		12B455F629E375F200F8E921 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
 		12B455F829E4BF1D00F8E921 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		12B455FA29E4C96B00F8E921 /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		12B455FC29E613FF00F8E921 /* CrewScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewScrollView.swift; sourceTree = "<group>"; };
+		12B455FE29E63B9600F8E921 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		12B4560029E63BA100F8E921 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +75,10 @@
 			children = (
 				12B455DD29E1A34F00F8E921 /* MoonshotApp.swift */,
 				12B455DF29E1A34F00F8E921 /* ContentView.swift */,
+				12B455FE29E63B9600F8E921 /* GridView.swift */,
+				12B4560029E63BA100F8E921 /* ListView.swift */,
 				12B455F829E4BF1D00F8E921 /* MissionView.swift */,
+				12B455FC29E613FF00F8E921 /* CrewScrollView.swift */,
 				12B455FA29E4C96B00F8E921 /* AstronautView.swift */,
 				12B455F029E36B4900F8E921 /* Astronaut.swift */,
 				12B455F229E36B8D00F8E921 /* Bundle-Decodable.swift */,
@@ -169,7 +178,10 @@
 				12B455F729E375F200F8E921 /* Color-Theme.swift in Sources */,
 				12B455E029E1A34F00F8E921 /* ContentView.swift in Sources */,
 				12B455F529E36DCF00F8E921 /* Missions.swift in Sources */,
+				12B455FD29E613FF00F8E921 /* CrewScrollView.swift in Sources */,
 				12B455DE29E1A34F00F8E921 /* MoonshotApp.swift in Sources */,
+				12B4560129E63BA100F8E921 /* ListView.swift in Sources */,
+				12B455FF29E63B9600F8E921 /* GridView.swift in Sources */,
 				12B455F329E36B8D00F8E921 /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

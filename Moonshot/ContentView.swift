@@ -14,64 +14,35 @@ struct ContentView: View {
     // Decode our missions json file containing info about all of our missions.
     let missions: [Mission] = Bundle.main.decode("missions.json")
     
-    // Set our LazyVGrid layout
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
+    // Variable to track whether we are showing a grid or list view
+    @State private var showingGrid = true
+    
+    // Function to toggle our showingGrid variable
+    func gridOrListToggle () {
+        showingGrid.toggle()
+    }
     
     var body: some View {
         NavigationView {
-            // Create a scrollable view
-            ScrollView {
-                // With a LazyVGrid, so it only loads data as needed, with the layout set to our adapative columns layout specified in our variable above
-                LazyVGrid(columns: columns) {
-                    // ForEach of our mission structs
-                    ForEach(missions) { mission in
-                        // Create a navigation link
-                        NavigationLink {
-                            // Have the link go to the MissionView, passing in the specific mission and the decoded astronauts dictionary
-                            MissionView(mission: mission, astronauts: astronauts)
-                        } label: {
-                            // Create a VStack with an image of each mission's logo, the mission's name, and the mission's launch date
-                            VStack {
-                                // Make our image resize and scale to our 100x100 frame at its original aspect ratio
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-
-                                VStack {
-                                    // Display the mission's displayName (programatically set in our struct)
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundColor(.white)
-                                    // Use nil coalescing to unwrap our mission launch date optional
-                                    Text(mission.formattedLaunchDate)
-                                        .font(.caption)
-                                        .foregroundColor(.white.opacity(0.5))
-                                }
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            // Make our NavigationLink into a rounded rectangle with a light border
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
-                        }
-                    }
+            // If showingGrid is true, then we show our grid view
+            Group {
+                if showingGrid {
+                    GridView(missions: missions, astronauts: astronauts)
+                    // Otherwise, we show our list view
+                } else {
+                    ListView(missions: missions, astronauts: astronauts)
                 }
-                .padding([.horizontal, .bottom])
             }
             .navigationTitle("Moonshot")
+            .listStyle(.plain)
             // The navigation title color belongs to the NavigationView and will show up as black or white depending on if the user is in light mode or dark mode. Since we're using a dark background, we want to tell Swift our user prefers dark mode ALWAYS so the header appears white.
             .preferredColorScheme(.dark)
-            // Give our ScrollView a dark background using our custom color extension
+            // Give our view a dark background using our custom color extension
             .background(.darkBackground)
+            // Button that toggles our grid/list view, and changes the text depending on the state of showingGrid
+            .toolbar {
+                Button(showingGrid ? "List" : "Grid", action: gridOrListToggle)
+            }
         }
     }
 }
